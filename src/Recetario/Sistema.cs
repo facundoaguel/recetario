@@ -51,7 +51,7 @@ namespace Recetario
                 }
                 else
                 {
-                    MessageBox.Show($"Faltan {(ingredienteReceta.Cantidad - ingredienteReceta.Ingrediente.Stock) * (-1)}gr de {ingredienteReceta.Ingrediente.Nombre}");
+                    MessageBox.Show($"Faltan {(ingredienteReceta.Cantidad - ingredienteReceta.Ingrediente.Stock) * (-1)}gr de {ingredienteReceta.Ingrediente.Nombre}, pedilo en nuestro botón.");
                 }
             }
         }
