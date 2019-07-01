@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Recetario
 {
@@ -17,12 +18,12 @@ namespace Recetario
         }
         //se crean e inicializan las listas ingrediente y receta
 
-        public void AgregarReceta(string nombre, List<IngredienteReceta> ingrediente )
+        public void AgregarReceta(string nombre, List<IngredienteReceta> ingredienteReceta )
         {
             Receta receta = new Receta()
             {
                 Nombre = nombre,
-                IngredienteReceta = ingrediente,
+                IngredienteReceta = ingredienteReceta,
             };
             Recetas.Add(receta);
             
@@ -40,9 +41,19 @@ namespace Recetario
             Recetas.Remove(receta);
         }
 
-        public void CocinarReceta()
+        public void CocinarReceta(Receta receta)
         {
-           
+           foreach (IngredienteReceta ingredienteReceta in receta.IngredienteReceta)
+            {
+                if (ingredienteReceta.Ingrediente.Stock >= ingredienteReceta.Cantidad)
+                {
+                    ingredienteReceta.Ingrediente.Stock -= ingredienteReceta.Cantidad;
+                }
+                else
+                {
+                    MessageBox.Show($"Faltan {(ingredienteReceta.Cantidad - ingredienteReceta.Ingrediente.Stock) * (-1)}gr de {ingredienteReceta.Ingrediente.Nombre}");
+                }
+            }
         }
         // Cuando se cocina una receta hay que restar la cantidad que se usa de cada ingrediente
         // dentro del stock.
