@@ -34,5 +34,15 @@ namespace Recetario
         {
 
         }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Recetas_listBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

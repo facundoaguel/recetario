@@ -12,5 +12,6 @@ namespace Recetario
         public decimal Stock { get; set; }
         public decimal PrecioKG { get; set; }
         public decimal PuntoPedido { get; set; }
+
     }
 }
