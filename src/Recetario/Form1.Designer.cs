@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.recetas_listBox = new System.Windows.Forms.ListBox();
-            this.agregar_button = new System.Windows.Forms.Button();
-            this.modificar_button = new System.Windows.Forms.Button();
             this.eliminar_button = new System.Windows.Forms.Button();
+            this.modificar_button = new System.Windows.Forms.Button();
+            this.agregar_button = new System.Windows.Forms.Button();
+            this.recetas_listBox = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.eliminaring_button = new System.Windows.Forms.Button();
             this.ingredientesReceta_listBox = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.stocking_button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -57,24 +57,14 @@
             this.groupBox1.Text = "Recetario";
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
-            // recetas_listBox
+            // eliminar_button
             // 
-            this.recetas_listBox.DisplayMember = "Nombre";
-            this.recetas_listBox.FormattingEnabled = true;
-            this.recetas_listBox.Location = new System.Drawing.Point(67, 30);
-            this.recetas_listBox.Name = "recetas_listBox";
-            this.recetas_listBox.Size = new System.Drawing.Size(211, 134);
-            this.recetas_listBox.TabIndex = 0;
-            this.recetas_listBox.SelectedIndexChanged += new System.EventHandler(this.Recetas_listBox_SelectedIndexChanged);
-            // 
-            // agregar_button
-            // 
-            this.agregar_button.Location = new System.Drawing.Point(67, 170);
-            this.agregar_button.Name = "agregar_button";
-            this.agregar_button.Size = new System.Drawing.Size(99, 23);
-            this.agregar_button.TabIndex = 1;
-            this.agregar_button.Text = "Agregar";
-            this.agregar_button.UseVisualStyleBackColor = true;
+            this.eliminar_button.Location = new System.Drawing.Point(67, 199);
+            this.eliminar_button.Name = "eliminar_button";
+            this.eliminar_button.Size = new System.Drawing.Size(211, 23);
+            this.eliminar_button.TabIndex = 3;
+            this.eliminar_button.Text = "Eliminar";
+            this.eliminar_button.UseVisualStyleBackColor = true;
             // 
             // modificar_button
             // 
@@ -85,14 +75,25 @@
             this.modificar_button.Text = "Modificar";
             this.modificar_button.UseVisualStyleBackColor = true;
             // 
-            // eliminar_button
+            // agregar_button
             // 
-            this.eliminar_button.Location = new System.Drawing.Point(67, 199);
-            this.eliminar_button.Name = "eliminar_button";
-            this.eliminar_button.Size = new System.Drawing.Size(211, 23);
-            this.eliminar_button.TabIndex = 3;
-            this.eliminar_button.Text = "Eliminar";
-            this.eliminar_button.UseVisualStyleBackColor = true;
+            this.agregar_button.Location = new System.Drawing.Point(67, 170);
+            this.agregar_button.Name = "agregar_button";
+            this.agregar_button.Size = new System.Drawing.Size(99, 23);
+            this.agregar_button.TabIndex = 1;
+            this.agregar_button.Text = "Agregar";
+            this.agregar_button.UseVisualStyleBackColor = true;
+            this.agregar_button.Click += new System.EventHandler(this.agregar_button_Click);
+            // 
+            // recetas_listBox
+            // 
+            this.recetas_listBox.DisplayMember = "Nombre";
+            this.recetas_listBox.FormattingEnabled = true;
+            this.recetas_listBox.Location = new System.Drawing.Point(67, 30);
+            this.recetas_listBox.Name = "recetas_listBox";
+            this.recetas_listBox.Size = new System.Drawing.Size(211, 134);
+            this.recetas_listBox.TabIndex = 0;
+            this.recetas_listBox.SelectedIndexChanged += new System.EventHandler(this.Recetas_listBox_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -125,7 +126,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.stocking_button);
             this.groupBox3.Location = new System.Drawing.Point(26, 279);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(337, 85);
@@ -133,14 +134,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ingredientes";
             // 
-            // button1
+            // stocking_button
             // 
-            this.button1.Location = new System.Drawing.Point(67, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Dirigirse al stock";
-            this.button1.UseVisualStyleBackColor = true;
+            this.stocking_button.Location = new System.Drawing.Point(67, 35);
+            this.stocking_button.Name = "stocking_button";
+            this.stocking_button.Size = new System.Drawing.Size(211, 23);
+            this.stocking_button.TabIndex = 0;
+            this.stocking_button.Text = "Dirigirse al stock";
+            this.stocking_button.UseVisualStyleBackColor = true;
+            this.stocking_button.Click += new System.EventHandler(this.stocking_button_Click);
             // 
             // Form1
             // 
@@ -171,7 +173,7 @@
         private System.Windows.Forms.Button eliminaring_button;
         private System.Windows.Forms.ListBox ingredientesReceta_listBox;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button stocking_button;
     }
 }
 

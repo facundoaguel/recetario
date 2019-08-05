@@ -7,18 +7,19 @@ using System.Windows.Forms;
 
 namespace Recetario
 {
-   public class Sistema
+    public static class Sistema
     {
-        public List<Receta> Recetas { get; set; }
-        public List<Ingrediente> Ingredientes { get; set; }
-        public Sistema()
+        public static List<Receta> Recetas { get; set; }
+        public static List<Ingrediente> Ingredientes { get; set; }
+
+        static Sistema()
         {
             Recetas = new List<Receta>();
             Ingredientes = new List<Ingrediente>();
         }
         //se crean e inicializan las listas ingrediente y receta
 
-        public void AgregarReceta(string nombre, List<IngredienteReceta> ingredienteReceta )
+        public static void AgregarReceta(string nombre, List<IngredienteReceta> ingredienteReceta)
         {
             Receta receta = new Receta()
             {
@@ -26,24 +27,24 @@ namespace Recetario
                 IngredienteReceta = ingredienteReceta,
             };
             Recetas.Add(receta);
-            
+
         }
 
-        public void ModificarReceta(string nombre, List<IngredienteReceta> ingrediente,Receta receta)
+        public static void ModificarReceta(string nombre, List<IngredienteReceta> ingrediente, Receta receta)
         {
             receta.Nombre = nombre;
             receta.IngredienteReceta = ingrediente;
 
         }
 
-        public void EliminarReceta(Receta receta)
+        public static void EliminarReceta(Receta receta)
         {
             Recetas.Remove(receta);
         }
 
-        public void CocinarReceta(Receta receta)
+        public static void CocinarReceta(Receta receta)
         {
-           foreach (IngredienteReceta ingredienteReceta in receta.IngredienteReceta)
+            foreach (IngredienteReceta ingredienteReceta in receta.IngredienteReceta)
             {
                 if (ingredienteReceta.Ingrediente.Stock >= ingredienteReceta.Cantidad)
                 {
@@ -55,8 +56,33 @@ namespace Recetario
                 }
             }
         }
+
         // Cuando se cocina una receta hay que restar la cantidad que se usa de cada ingrediente
         // dentro del stock.
+
+        public static void AgregarIngrediente(string nombre, decimal stock, decimal preciokg, decimal cantidadminima)
+        {
+            Ingrediente ingrediente = new Ingrediente()
+            {
+                Nombre = nombre,
+                Stock = stock,
+                PrecioKG = preciokg,
+                CantidadMinima = cantidadminima,
+            };
+            Ingredientes.Add(ingrediente);
+        }
+        public static void ModificarIngrediente(string nombre, decimal stock, decimal preciokg, decimal cantidadminima, Ingrediente ingrediente)
+        {
+            ingrediente.Nombre = nombre;
+            ingrediente.Stock = stock;
+            ingrediente.PrecioKG = preciokg;
+            ingrediente.CantidadMinima = cantidadminima;
+        }
+        public static void EliminarIngrediente(Ingrediente ingrediente)
+        {
+            Ingredientes.Remove(ingrediente);
+        }
     }
+
 
 }

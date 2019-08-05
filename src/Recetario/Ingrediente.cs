@@ -11,7 +11,15 @@ namespace Recetario
         public string Nombre { get; set; }
         public decimal Stock { get; set; }
         public decimal PrecioKG { get; set; }
-        public decimal PuntoPedido { get; set; }
+        public decimal CantidadMinima { get; set; }
+
+        public string MostrarDatos
+        {
+            get
+            {
+                return $"{Stock} | {Nombre} | ${PrecioKG}";
+            }
+        }
 
     }
 }
