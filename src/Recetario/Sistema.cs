@@ -19,21 +19,21 @@ namespace Recetario
         }
         //se crean e inicializan las listas ingrediente y receta
 
-        public static void AgregarReceta(string nombre, List<IngredienteReceta> ingredienteReceta)
+        public static void AgregarReceta(string nombre)
         {
             Receta receta = new Receta()
             {
                 Nombre = nombre,
-                IngredienteReceta = ingredienteReceta,
+               IngredienteReceta = new List<IngredienteReceta>()
             };
             Recetas.Add(receta);
 
         }
 
-        public static void ModificarReceta(string nombre, List<IngredienteReceta> ingrediente, Receta receta)
+        public static void ModificarReceta(string nombre, Receta receta)
         {
             receta.Nombre = nombre;
-            receta.IngredienteReceta = ingrediente;
+          
 
         }
 
@@ -82,6 +82,25 @@ namespace Recetario
         {
             Ingredientes.Remove(ingrediente);
         }
+        public static void AgregarIngredienteReceta(Receta receta, Ingrediente ingrediente, decimal cantidad)
+        {
+            IngredienteReceta ingredienteReceta = new IngredienteReceta()
+            {
+                Ingrediente = ingrediente,
+                Cantidad = cantidad,
+            };
+            receta.IngredienteReceta.Add(ingredienteReceta);
+        }
+        public static void EliminarIngredienteReceta(Receta receta, IngredienteReceta ingredienteReceta)
+        {
+            receta.IngredienteReceta.Remove(ingredienteReceta);
+        }
+        public static void ModificarIngredienteReceta(IngredienteReceta ingredienteReceta, decimal cantidad)
+        {
+            ingredienteReceta.Cantidad = cantidad;
+        }
+
+        
     }
 
 

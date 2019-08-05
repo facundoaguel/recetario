@@ -51,5 +51,15 @@ namespace Recetario
         {
             new VistaIngredientes().ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new Recetario().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Al utilizar este software quedara obligado a ponerle un 10 al creador del mismo. :)", "Términos y condiciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
