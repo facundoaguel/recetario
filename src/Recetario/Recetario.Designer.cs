@@ -70,6 +70,7 @@
             // 
             // ingredientesreceta_comboBox
             // 
+            this.ingredientesreceta_comboBox.DisplayMember = "Nombre";
             this.ingredientesreceta_comboBox.FormattingEnabled = true;
             this.ingredientesreceta_comboBox.Location = new System.Drawing.Point(26, 83);
             this.ingredientesreceta_comboBox.Name = "ingredientesreceta_comboBox";
@@ -93,6 +94,7 @@
             this.agregaringreceta_button.TabIndex = 5;
             this.agregaringreceta_button.Text = "+";
             this.agregaringreceta_button.UseVisualStyleBackColor = true;
+            this.agregaringreceta_button.Click += new System.EventHandler(this.Agregaringreceta_button_Click);
             // 
             // groupBox2
             // 
@@ -113,10 +115,11 @@
             this.eliminaringreceta_button.TabIndex = 3;
             this.eliminaringreceta_button.Text = "Eliminar";
             this.eliminaringreceta_button.UseVisualStyleBackColor = true;
+            this.eliminaringreceta_button.Click += new System.EventHandler(this.Eliminaringreceta_button_Click);
             // 
             // ingredientesReceta_listBox
             // 
-            this.ingredientesReceta_listBox.DisplayMember = "IngredienteReceta";
+            this.ingredientesReceta_listBox.DisplayMember = "MostrarTodo";
             this.ingredientesReceta_listBox.FormattingEnabled = true;
             this.ingredientesReceta_listBox.Location = new System.Drawing.Point(28, 34);
             this.ingredientesReceta_listBox.Name = "ingredientesReceta_listBox";
@@ -151,6 +154,7 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de recetas";
+            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // cocinar_button
             // 
@@ -170,6 +174,7 @@
             this.recetas_listBox.Name = "recetas_listBox";
             this.recetas_listBox.Size = new System.Drawing.Size(113, 160);
             this.recetas_listBox.TabIndex = 6;
+            this.recetas_listBox.SelectedIndexChanged += new System.EventHandler(this.Recetas_listBox_SelectedIndexChanged);
             // 
             // eliminar_button
             // 
@@ -179,6 +184,7 @@
             this.eliminar_button.TabIndex = 8;
             this.eliminar_button.Text = "Eliminar";
             this.eliminar_button.UseVisualStyleBackColor = true;
+            this.eliminar_button.Click += new System.EventHandler(this.Eliminar_button_Click);
             // 
             // modificar_button
             // 
@@ -212,6 +218,7 @@
             this.modificaringreceta_button.TabIndex = 11;
             this.modificaringreceta_button.Text = "Modificar";
             this.modificaringreceta_button.UseVisualStyleBackColor = true;
+            this.modificaringreceta_button.Click += new System.EventHandler(this.Modificaringreceta_button_Click);
             // 
             // label2
             // 
@@ -240,6 +247,7 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "Recetario";
             this.Text = "Recetario";
+            this.Load += new System.EventHandler(this.Recetario_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

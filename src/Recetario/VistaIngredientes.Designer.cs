@@ -50,7 +50,7 @@
             this.stockingredientes_listBox.FormattingEnabled = true;
             this.stockingredientes_listBox.Location = new System.Drawing.Point(360, 72);
             this.stockingredientes_listBox.Name = "stockingredientes_listBox";
-            this.stockingredientes_listBox.Size = new System.Drawing.Size(120, 160);
+            this.stockingredientes_listBox.Size = new System.Drawing.Size(120, 186);
             this.stockingredientes_listBox.TabIndex = 2;
             this.stockingredientes_listBox.SelectedIndexChanged += new System.EventHandler(this.stockingredientes_listBox_SelectedIndexChanged);
             // 
@@ -123,7 +123,6 @@
             this.groupBox1.Size = new System.Drawing.Size(259, 249);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // cantidadminima_textBox
@@ -160,7 +159,7 @@
             // 
             // eliminaring_button
             // 
-            this.eliminaring_button.Location = new System.Drawing.Point(360, 250);
+            this.eliminaring_button.Location = new System.Drawing.Point(360, 277);
             this.eliminaring_button.Name = "eliminaring_button";
             this.eliminaring_button.Size = new System.Drawing.Size(120, 23);
             this.eliminaring_button.TabIndex = 11;
@@ -172,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 339);
             this.Controls.Add(this.eliminaring_button);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.stockingredientes_listBox);

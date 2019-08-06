@@ -24,7 +24,7 @@ namespace Recetario
             Receta receta = new Receta()
             {
                 Nombre = nombre,
-               IngredienteReceta = new List<IngredienteReceta>()
+                IngredienteReceta = new List<IngredienteReceta>()
             };
             Recetas.Add(receta);
 
@@ -52,7 +52,7 @@ namespace Recetario
                 }
                 else
                 {
-                    MessageBox.Show($"Faltan {(ingredienteReceta.Cantidad - ingredienteReceta.Ingrediente.Stock) * (-1)}gr de {ingredienteReceta.Ingrediente.Nombre}, pedilo en nuestro botón.");
+                    MessageBox.Show($"Faltan {(ingredienteReceta.Cantidad - ingredienteReceta.Ingrediente.Stock) * (1)}gr de {ingredienteReceta.Ingrediente.Nombre}, verifique el stock.", "FALTAN INGREDIENTES", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

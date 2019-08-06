@@ -10,5 +10,12 @@ namespace Recetario
     {
         public Ingrediente Ingrediente { get; set; }
         public decimal Cantidad { get; set; }
+        public string MostrarTodo
+        {
+            get
+            {
+                return $"{Cantidad} | {Ingrediente.Nombre}";
+            }
+        }
     }
 }
