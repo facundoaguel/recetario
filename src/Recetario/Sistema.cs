@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,6 +72,7 @@ namespace Recetario
                 CantidadMinima = cantidadminima,
             };
             Ingredientes.Add(ingrediente);
+            Guardar();
         }
         public static void ModificarIngrediente(string nombre, decimal stock, decimal preciokg, decimal cantidadminima, Ingrediente ingrediente)
         {
@@ -77,10 +80,12 @@ namespace Recetario
             ingrediente.Stock = stock;
             ingrediente.PrecioKG = preciokg;
             ingrediente.CantidadMinima = cantidadminima;
+            Guardar();
         }
         public static void EliminarIngrediente(Ingrediente ingrediente)
         {
             Ingredientes.Remove(ingrediente);
+            Guardar();
         }
         public static void AgregarIngredienteReceta(Receta receta, Ingrediente ingrediente, decimal cantidad)
         {
@@ -98,6 +103,14 @@ namespace Recetario
         public static void ModificarIngredienteReceta(IngredienteReceta ingredienteReceta, decimal cantidad)
         {
             ingredienteReceta.Cantidad = cantidad;
+        }
+        private static void Guardar()
+        {
+            using (StreamWriter escritor = new StreamWriter("ingredientes.json"))
+            {
+                string ingredientesJson = JsonConvert.SerializeObject(Ingredientes);
+                escritor.Write(ingredientesJson);
+            }
         }
 
         
