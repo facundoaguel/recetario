@@ -35,7 +35,7 @@
             // 
             // stocking_button
             // 
-            this.stocking_button.Location = new System.Drawing.Point(44, 64);
+            this.stocking_button.Location = new System.Drawing.Point(77, 82);
             this.stocking_button.Name = "stocking_button";
             this.stocking_button.Size = new System.Drawing.Size(211, 23);
             this.stocking_button.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(44, 23);
+            this.button1.Location = new System.Drawing.Point(77, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 23);
             this.button1.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(44, 131);
+            this.button2.Location = new System.Drawing.Point(77, 149);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(211, 23);
             this.button2.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 166);
+            this.ClientSize = new System.Drawing.Size(357, 244);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.stocking_button);

@@ -113,8 +113,13 @@ namespace Recetario
             }
         }
 
-        
+        public static void Cargar()
+        {
+            using (StreamReader lector = new StreamReader("ingredientes.json"))
+            {
+                string ingredientesJson = lector.ReadToEnd(); 
+                Ingredientes = JsonConvert.DeserializeObject<List<Ingrediente>>(ingredientesJson);
+            }
+        }        
     }
-
-
 }

@@ -58,6 +58,7 @@
     <Compile Include="IngredienteReceta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="publico.cs" />
     <Compile Include="Receta.cs" />
     <Compile Include="Recetario.cs">
       <SubType>Form</SubType>
