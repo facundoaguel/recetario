@@ -15,7 +15,7 @@ namespace Recetario
         public VistaIngredientes()
         {
             InitializeComponent();
-            Sistema.Cargar();
+            Sistema.CargarIngrediente();
         }
 
         private void VistaRecetas_Load(object sender, EventArgs e)

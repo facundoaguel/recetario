@@ -46,10 +46,13 @@ namespace Recetario
         private void RefrescarIngredientes()
         {
             ingredientesReceta_listBox.Items.Clear();
+            if (recetas_listBox.SelectedItem!=null)
+            { 
             Receta receta = recetas_listBox.SelectedItem as Receta;
             foreach (IngredienteReceta ingrediente in receta.IngredienteReceta)
-            {
+                {
                 ingredientesReceta_listBox.Items.Add(ingrediente);
+                }
             }
         }
 

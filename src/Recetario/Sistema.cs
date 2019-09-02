@@ -72,7 +72,7 @@ namespace Recetario
                 CantidadMinima = cantidadminima,
             };
             Ingredientes.Add(ingrediente);
-            Guardar();
+            GuardarIngrediente();
         }
         public static void ModificarIngrediente(string nombre, decimal stock, decimal preciokg, decimal cantidadminima, Ingrediente ingrediente)
         {
@@ -80,12 +80,12 @@ namespace Recetario
             ingrediente.Stock = stock;
             ingrediente.PrecioKG = preciokg;
             ingrediente.CantidadMinima = cantidadminima;
-            Guardar();
+            GuardarIngrediente();
         }
         public static void EliminarIngrediente(Ingrediente ingrediente)
         {
             Ingredientes.Remove(ingrediente);
-            Guardar();
+            GuardarIngrediente();
         }
         public static void AgregarIngredienteReceta(Receta receta, Ingrediente ingrediente, decimal cantidad)
         {
@@ -104,7 +104,7 @@ namespace Recetario
         {
             ingredienteReceta.Cantidad = cantidad;
         }
-        private static void Guardar()
+        private static void GuardarIngrediente()
         {
             using (StreamWriter escritor = new StreamWriter("ingredientes.json"))
             {
@@ -113,7 +113,7 @@ namespace Recetario
             }
         }
 
-        public static void Cargar()
+        public static void CargarIngrediente()
         {
             using (StreamReader lector = new StreamReader("ingredientes.json"))
             {
