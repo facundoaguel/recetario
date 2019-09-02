@@ -18,6 +18,7 @@ namespace Recetario
         {
             Recetas = new List<Receta>();
             Ingredientes = new List<Ingrediente>();
+            CargarIngrediente();
         }
         //se crean e inicializan las listas ingrediente y receta
 
