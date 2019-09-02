@@ -116,10 +116,13 @@ namespace Recetario
 
         private static void CargarIngrediente()
         {
+            if (File.Exists("ingredientes.json"))
+            { 
             using (StreamReader lector = new StreamReader("ingredientes.json"))
-            {
+                {
                 string ingredientesJson = lector.ReadToEnd(); 
                 Ingredientes = JsonConvert.DeserializeObject<List<Ingrediente>>(ingredientesJson);
+                }
             }
         }        
     }
