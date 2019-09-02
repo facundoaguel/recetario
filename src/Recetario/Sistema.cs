@@ -113,7 +113,7 @@ namespace Recetario
             }
         }
 
-        public static void CargarIngrediente()
+        private static void CargarIngrediente()
         {
             using (StreamReader lector = new StreamReader("ingredientes.json"))
             {
