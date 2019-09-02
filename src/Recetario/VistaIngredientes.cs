@@ -15,11 +15,13 @@ namespace Recetario
         public VistaIngredientes()
         {
             InitializeComponent();
+            Sistema.Cargar();
         }
 
         private void VistaRecetas_Load(object sender, EventArgs e)
         {
             Refrescar();
+
         }
 
         private void GroupBox1_Enter(object sender, EventArgs e)
