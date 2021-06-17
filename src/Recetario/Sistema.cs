@@ -122,6 +122,7 @@ namespace Recetario
                 {
                 string ingredientesJson = lector.ReadToEnd(); 
                 Ingredientes = JsonConvert.DeserializeObject<List<Ingrediente>>(ingredientesJson);
+                //hola lukitas
                 }
             }
         }        
